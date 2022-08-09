@@ -54,93 +54,46 @@
     </header>
     <!-- Main -->
     <main class="container-fluid p-0 ">
-      <div class="container">
+      <div class="container" id="table">
         <table class="table table-bordered mt-3">
+          <!-- Table container 1:  Events -->
           <thead>
-            <tr class="table-secondary">
-              <th scope="col">Events statistics</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
+            <tr class="table-dark">
+              <th scope="col" colspan="3" class="text-center ">Events statistics</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="eventStatistics">
             <tr class="table-light">
               <td>Events with the highest percentage of attendance</td>
-              <td>Events with the highest percentage of attendance</td>
+              <td >Events with the highest percentage of attendance</td>
               <td>Event with larger capacity</td>
             </tr>
-            <tr class="table-light">
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
-            </tr>
           </tbody>
+          <!-- Table container 2: Upcoming events -->
           <thead>
-            <tr class="table-secondary">
-              <th scope="col">Upcoming events statics by category</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
+            <tr class="table-dark">
+              <th scope="col" colspan="3" class="text-center ">Upcoming events statics by category</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tBodyUpcoming">
             <tr class="table-light">
               <td>Categories</td>
               <td>Revenues</td>
               <td>Percentage of attendance</td>
             </tr>
-            <tr class="table-light">
-              <td> ...</td>
-              <td> ...</td>
-              <td> ...</td>
-            </tr>
-            <tr class="table-light">
-              <td> ...</td>
-              <td> ...</td>
-              <td> ...</td>
-            </tr>
-            <tr class="table-light">
-              <td> ...</td>
-              <td> ...</td>
-              <td> ...</td>
-            </tr>
+            
           </tbody>
+          <!-- Table container 3: Past events -->
           <thead>
-            <tr class="table-secondary">
-              <th scope="col">Events statistics</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
+            <tr class="table-dark">
+              <th scope="col" colspan="3" class="text-center" >Past Events statistic by category</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="tBodyPast">
             <tr class="table-light">
               <td>Categories</td>
               <td>Revenues</td>
               <td>Percentage of attendance</td>
-            </tr>
-            <tr class="table-light">
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
-            </tr>
-            <tr class="table-light">
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
-            </tr>
-            <tr class="table-light">
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
-            </tr>
-            <tr class="table-light">
-              <td>... </td>
-              <td> ...</td>
-              <td>... </td>
-            </tr>
-            <tr class="table-light">
-              <td>...</td>
-              <td>...</td>
-              <td>...</td>
             </tr>
           </tbody>
         </table>
@@ -173,5 +126,6 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/stats.js"></script>
   </body>
 </html>
