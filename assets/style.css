@@ -136,12 +136,31 @@ footer{
     }
     /* simil botom of mobile category */
     .similBotom{
+        width: 47%;
+        padding: 1px 0px 1px 29px;
         background-color: rgba(51, 51, 51, 0.327);
-        border: 1px solid rgba(0, 0, 0, 0.395);
+        border: 1px solid rgba(0, 0, 0, 0.105);
         border-radius: 7px ;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.495);
+        box-shadow: 6px 6px 12px #c5c5c596,
+                    -6px -6px 12px #ffffff40;
         min-width: 35%;
     }
+    /* .similBotom {
+        color: #090909;
+        padding: 5px 4px 5px 22px;
+        font-size: 15px;
+        border-radius: 0.5em;
+        background: #e8e8e8;
+        border: 1px solid #e8e8e8;
+        transition: all .3s;
+        border: 2px solid rgba(13, 13, 13, 0.189);
+    }
+       
+    .similBotom:active {
+        color: #666;
+        box-shadow: inset 4px 4px 12px #c5c5c5,
+                    inset -4px -4px 12px #ffffff;
+    } */
     .footer-div {
         flex-direction: column;
     }

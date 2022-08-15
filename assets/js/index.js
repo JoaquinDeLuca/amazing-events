@@ -64,7 +64,7 @@ const pushArray = (data) => {
         
         categoryFilter.forEach((category)=>{
             let divCat = document.createElement("div")
-            divCat.className = "form-check form-check-inline similBotom my-1 mx-1 m-sm-0"
+            divCat.className = "form-check form-check-inline similBotom my-1 mx-1 m-sm-1"
             divCat.innerHTML = `
                 <input class="form-check-input checkb" type="checkbox" id="${category}" value="${category}">
                 <label class="form-check-label" for="${category}">${category}</label>

@@ -1,11 +1,11 @@
 //consumo de la api 
 const api = "https://amazing-events.herokuapp.com/api/events"
 fetch (api)
-.then(response => response.json())
-.then(data => pushArray(data))
+.then( response => response.json())
+.then(data => array(data))
 
 
-const pushArray = (data) => {
+const array = (data) => {
     
     // aca estan todos los eventos traidos con fech 
     let arrayEvents = data.events
@@ -77,7 +77,11 @@ const pushArray = (data) => {
 
    
     // _____________________ filtrado final______________________________
+    // Eventos con mayor porcentaje de asistencia
 
+    // Eventos con menor porcentaje de asistencia
+    
+    // Evento con mayor capacidad
     function finalFilter (){
         // Capturo el elemento del html 
         let tbody = document.getElementById("eventStatistics")

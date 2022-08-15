@@ -1,4 +1,3 @@
-console.log("... js cargado")
 
 //consumo de la api 
 const api = "https://amazing-events.herokuapp.com/api/events"
