@@ -4,17 +4,17 @@ const checkBoxContainer = document.getElementById("containerCategory")
 const inputSearch = document.getElementById("search")
 const containerCategory = document.getElementById("containerCategory")
 
-//consumo de la api 
-const api = "https://amazing-events.herokuapp.com/api/events"
-fetch (api)
-.then(response => response.json())
-.then(data => pushArray(data))
+//consumo de eventos
+import eventData from '../productos.json' assert {type: 'json'}
 
 
 const pushArray = (data) => {
     
     let arrayEvents = data.events; // array de eventos 
-    let currentDatee = data.currentDate // fecha actual
+    let currentDatee = data.currentDate; // fecha actual
+
+
+
 
 
     inputSearch.addEventListener("keyup", ()=>{
@@ -28,20 +28,20 @@ const pushArray = (data) => {
     function paintCards (arrayOfEvents){
         cardsContainer.innerHTML = ""
         arrayOfEvents.forEach(event => {
-            if (currentDatee < event.date){
+            if (currentDatee > event.date){
                 let card = document.createElement("div")
                 card.className = "card-mof"
                 card.innerHTML = `
                 <div class="card shadow-card ">
                             <img src="${event.image}" class="card-img-top img-t" alt="cine">
                     <div class="card-body cardd-bodyy">
-                        <div class="d-flex flex-column align-items-center">
-                            <p class="card-text">Date: ${event.date}</p>
+                        <div class="d-flex flex-column align-items-center h-75">
+                            <p class="card-text p-0 mb-2"><span class='fw-semibold'>Date:</span> ${event.date}</p>
                             <h5 class="card-title">${event.name}</h5>
                             <p class="card-text">${event.description}</p>
                         </div>
                         <!-- bottom -->
-                        <div class="d-flex justify-content-between align-items-baseline mt-4">
+                        <div class="d-flex justify-content-between align-items-baseline mt-2">
                             <p class="fw-bold">$${event.price}</p>
                             <a href="details.html?id=${event._id}" target="_blank" class="btn-a">see more</a>
                         </div>
@@ -57,8 +57,6 @@ const pushArray = (data) => {
     }
     paintCards(arrayEvents);
 
-
-
     //_____ funcion para pintar los chebox categorias dinamicamente________
 
     function paintCheboxCategories (){
@@ -68,7 +66,7 @@ const pushArray = (data) => {
         
         categoryFilter.forEach((category)=>{
             let divCat = document.createElement("div")
-            divCat.className = "form-check form-check-inline similBotom my-1 mx-1 m-sm-0"
+            divCat.className = "form-check form-check-inline similBotom my-1 mx-1 m-sm-1"
             divCat.innerHTML = `
                 <input class="form-check-input checkb" type="checkbox" id="${category}" value="${category}">
                 <label class="form-check-label" for="${category}">${category}</label>
@@ -110,3 +108,5 @@ const pushArray = (data) => {
         // console.log(arrayFilCat)
     }
 }
+
+pushArray(eventData);

@@ -1,9 +1,5 @@
-
-//consumo de la api 
-const api = "https://amazing-events.herokuapp.com/api/events"
-fetch (api)
-.then(response => response.json())
-.then(data => pushArray(data))
+//consumo de eventos
+import eventData from '../productos.json' assert {type: 'json'}
 
 const pushArray = (data) => {
     
@@ -51,3 +47,5 @@ const pushArray = (data) => {
     </div>
     `
 }
+
+pushArray(eventData);

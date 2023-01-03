@@ -1,8 +1,5 @@
-//consumo de la api 
-const api = "https://amazing-events.herokuapp.com/api/events"
-fetch (api)
-.then( response => response.json())
-.then(data => array(data))
+//consumo de eventos
+import eventData from '../productos.json' assert {type: 'json'}
 
 
 const array = (data) => {
@@ -136,3 +133,5 @@ const array = (data) => {
     }
     finalFilter()
 }
+
+array(eventData);
